@@ -51,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         @Override
         public void onClick(View view) {
-            onClicklistener.onClick(mountains.get(getAdapterPosition()));
+            onClicklistener.onClick(mountains.get(getBindingAdapterPosition()));
         }
     }
 

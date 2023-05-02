@@ -1,19 +1,27 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+## Add a RecyclerView to your layout
 
-_Du kan ta bort all text som finns sedan tidigare_.
 
-## Följande grundsyn gäller dugga-svar:
+## Add member variables in your activity
 
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
 
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
+## Create a RecyclerView.Adapter
+
+
+## Create a RecyclerView.ViewHolder
+
+
+## Use getJson() to download your json data by changing the JSON_URL
+
+
+
+## Write code in onPostExecute()
+
+
+## Display the names of the mountains in the RecyclerView
+
 
 ```
 function errorCallback(error) {
@@ -30,13 +38,114 @@ function errorCallback(error) {
     }
 }
 ```
+_Recyclerview_
+
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_Member Variables_
+
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_Adapter_
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_Viewholder_
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_getJson()_
+
+
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_onPostExecute()_
+
+```
+function errorCallback(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            // Geolocation API stöds inte, gör något
+            break;
+        case error.POSITION_UNAVAILABLE:
+            // Misslyckat positionsanrop, gör något
+            break;
+        case error.UNKNOWN_ERROR:
+            // Okänt fel, gör något
+            break;
+    }
+}
+```
+_Display the names of the mountains_
 
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](android.png)
-
-Läs gärna:
-
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.

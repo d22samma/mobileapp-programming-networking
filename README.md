@@ -143,5 +143,4 @@ _onPostExecute()_
 ```
 _Display the names of the mountains_
 
-![](Screen.png)
-Wrong message fixed with removing space on hardware.  
+![](Screenshot_20230503_093145.png)

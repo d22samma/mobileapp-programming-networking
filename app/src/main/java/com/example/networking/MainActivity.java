@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private ArrayList mountains;
+    private ArrayList mountains = new ArrayList<>();
     private RecyclerViewAdapter adapter;
 
 
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         ArrayList<Mountain> data = gson.fromJson(json, type);
         mountains.addAll(data);
-        adapter.notifyDataSetChanged();
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mountains, new RecyclerViewAdapter.OnClickListener() {
+        adapter = new RecyclerViewAdapter(this, mountains, new RecyclerViewAdapter.OnClickListener() {
             @Override
             public void onClick(RecyclerViewItem item) {
                 Toast.makeText(MainActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
+        adapter.notifyDataSetChanged();
     }
 }

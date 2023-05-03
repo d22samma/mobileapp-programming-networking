@@ -19,7 +19,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private ArrayList <RecyclerViewItem> mountains = new ArrayList<>();
-
     private RecyclerViewAdapter adapter;
 
 

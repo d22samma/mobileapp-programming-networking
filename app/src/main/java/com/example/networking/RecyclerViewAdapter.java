@@ -7,41 +7,39 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private List<RecyclerViewItem> mountains;
-    private LayoutInflater layoutinflater;
-    private OnClickListener onClicklistener;
+    private ArrayList<RecyclerViewItem> items;
+    private LayoutInflater layoutInflater;
+    private OnClickListener onClickListener;
 
-    RecyclerViewAdapter(Context context, List<RecyclerViewItem> items, OnClickListener onClickListener) {
-        this.layoutinflater = LayoutInflater.from(context);
-        this.mountains = items;
-        this.onClicklistener = onClickListener;
+    RecyclerViewAdapter(Context context, ArrayList<RecyclerViewItem> items, OnClickListener onClickListener) {
+        this.layoutInflater = LayoutInflater.from(context);
+        this.items = items;
+        this.onClickListener = onClickListener;
     }
 
     @Override
     @NonNull
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(layoutinflater.inflate(R.layout.list_item, parent, false));
+        return new ViewHolder(layoutInflater.inflate(R.layout.list_item, parent, false));
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.title.setText(mountains.get(position).getTitle());
+        holder.title.setText(items.get(position).getTitle());
     }
 
     @Override
     public int getItemCount() {
-        return mountains.size();
+        return items.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
         TextView title;
 
         ViewHolder(View itemView) {
@@ -52,11 +50,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         @Override
         public void onClick(View view) {
-            onClicklistener.onClick(mountains.get(getBindingAdapterPosition()));
+            onClickListener.onClick(items.get(getAdapterPosition()));
         }
     }
 
     public interface OnClickListener {
         void onClick(RecyclerViewItem item);
+    }
+
+    public void refreshItems(ArrayList<RecyclerViewItem> items){
+        this.items = items;
     }
 }

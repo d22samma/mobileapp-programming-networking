@@ -10,26 +10,28 @@ public class Mountain {
     @SerializedName("size")
     private int height;
 
-    public Mountain (String n, String l, int h)
-    {
-        name=n;
-        location=l;
-        height=h;
-    }
-
-    public String info()
-    {
-        String tmp= new String();
-        tmp+=name+location+height;
-        return tmp;
-    }
-
-    public void setName (String n)
-    {
-        name=n;
-    }
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 }
+

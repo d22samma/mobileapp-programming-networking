@@ -18,6 +18,7 @@ public class Mountain {
         this.name = name;
     }
 
+
     public String getLocation() {
         return location;
     }
